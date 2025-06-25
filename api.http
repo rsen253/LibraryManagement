@@ -1,0 +1,33 @@
+### Get all libraries with their address, books, authors, and members
+GET https://localhost:44347/api/library
+Accept: application/json
+
+
+### Get all books by a specific author
+GET https://localhost:44347/api/library/books/author/1
+Accept: application/json
+
+
+### Get book borrowing history by book ID
+GET https://localhost:44347/api/library/book/history/1
+Accept: application/json
+
+
+### Get all books borrowed by a member
+GET https://localhost:44347/api/library/member/1/books
+Accept: application/json
+
+
+### Add a new book with author, members, and assign it to a library
+POST https://localhost:44347/api/library/book
+Content-Type: application/json
+
+{
+  "title": "The Pragmatic Programmer",
+  "authorName": "Andy Hunt",
+  "libraryId": 1,
+  "memberNames": [
+    "Alice Johnson",
+    "Charlie Brown"
+  ]
+}
