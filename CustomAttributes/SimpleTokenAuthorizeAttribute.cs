@@ -58,9 +58,6 @@ namespace LibraryManagement.CustomAttributes
                 return;
             }
 
-            // Set thread principal (optional)
-            var identity = new GenericIdentity(username);
-            Thread.CurrentPrincipal = new GenericPrincipal(identity, null);
         }
     }
 }
