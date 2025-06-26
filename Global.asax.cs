@@ -15,6 +15,14 @@ namespace LibraryManagement
         {
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            // Add these lines to ignore reference loops:
+            GlobalConfiguration.Configuration.Formatters
+                .JsonFormatter.SerializerSettings.ReferenceLoopHandling
+                    = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
+            GlobalConfiguration.Configuration.Formatters
+                .JsonFormatter.SerializerSettings.NullValueHandling
+                    = Newtonsoft.Json.NullValueHandling.Ignore;
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
