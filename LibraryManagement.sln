@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Contract", "LibraryManagement.Contract\LibraryManagement.Contract.csproj", "{87420996-3B4F-4354-B7AF-71C8A3F5420E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomapperExample", "..\AutomapperExample\AutomapperExample.csproj", "{B9F05B2A-41FC-4DA7-964A-8A9C0AE5D60A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{87420996-3B4F-4354-B7AF-71C8A3F5420E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87420996-3B4F-4354-B7AF-71C8A3F5420E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87420996-3B4F-4354-B7AF-71C8A3F5420E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F05B2A-41FC-4DA7-964A-8A9C0AE5D60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F05B2A-41FC-4DA7-964A-8A9C0AE5D60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F05B2A-41FC-4DA7-964A-8A9C0AE5D60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F05B2A-41FC-4DA7-964A-8A9C0AE5D60A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

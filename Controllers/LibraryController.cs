@@ -17,7 +17,7 @@ namespace LibraryManagement.Controllers
         // GET: api/library
         [HttpGet]
         [Route("api/library")]
-        //[SimpleTokenAuthorize]
+        [SimpleTokenAuthorize]
         public IHttpActionResult GetLibrariesWithAllData()
         {
             var result = _service.GetLibrariesWithAllData();
