@@ -1,30 +1,23 @@
 ﻿using LibraryManagement.Application;
 using LibraryManagement.CustomAttributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using System.Web.Http;
-using static LibraryManagement.Application.MemberBookDto;
+using static LibraryManagement.Contract.MemberBookDto;
 
 namespace LibraryManagement.Controllers
 {
     public class LibraryController : ApiController
     {
-        private readonly LibraryService _service;
+        private readonly ILibraryService _service;
 
-        public LibraryController()
+        public LibraryController(ILibraryService service)
         {
-            _service = new LibraryService();
+            _service = service;
         }
 
         // GET: api/library
         [HttpGet]
         [Route("api/library")]
-        [SimpleTokenAuthorize]
+        //[SimpleTokenAuthorize]
         public IHttpActionResult GetLibrariesWithAllData()
         {
             var result = _service.GetLibrariesWithAllData();

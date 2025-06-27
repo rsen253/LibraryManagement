@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement", "LibraryManagement.csproj", "{A4AD7D2A-6EDB-4A5C-8ECB-0E6E6F1DF0D1}"
 EndProject
@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		api.http = api.http
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Contract", "LibraryManagement.Contract\LibraryManagement.Contract.csproj", "{87420996-3B4F-4354-B7AF-71C8A3F5420E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{DF6B8E70-5A66-4732-9369-536E614CA646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF6B8E70-5A66-4732-9369-536E614CA646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF6B8E70-5A66-4732-9369-536E614CA646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87420996-3B4F-4354-B7AF-71C8A3F5420E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87420996-3B4F-4354-B7AF-71C8A3F5420E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87420996-3B4F-4354-B7AF-71C8A3F5420E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87420996-3B4F-4354-B7AF-71C8A3F5420E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

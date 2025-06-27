@@ -1,6 +1,12 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Integration.Mvc;
+using Autofac.Integration.WebApi;
+using LibraryManagement.Application;
+using LibraryManagement.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -13,9 +19,24 @@ namespace LibraryManagement
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            // Add these lines to ignore reference loops:
+
+            var builder = new ContainerBuilder();
+
+            // Register Web API controllers
+            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+
+            // Register your types
+            builder.RegisterType<LibraryRepository>().As<ILibraryRepository>().InstancePerRequest();
+            builder.RegisterType<LibraryService>().As<ILibraryService>().InstancePerRequest();
+
+            var container = builder.Build();
+
+            // Set Autofac as the Web API dependency resolver
+            GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+
+            AreaRegistration.RegisterAllAreas();
+            // Remove the second call to WebApiConfig.Register
             GlobalConfiguration.Configuration.Formatters
                 .JsonFormatter.SerializerSettings.ReferenceLoopHandling
                     = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
