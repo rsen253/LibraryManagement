@@ -51,11 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookDto.cs" />
+    <Compile Include="ILibraryService.cs" />
     <Compile Include="LibraryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibraryManagement.Contract\LibraryManagement.Contract.csproj">
+      <Project>{87420996-3b4f-4354-b7af-71c8a3f5420e}</Project>
+      <Name>LibraryManagement.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Data\LibraryManagement.Data.csproj">
       <Project>{3bc9ef9c-95c2-40e7-aa33-20b01d4ae2e6}</Project>
       <Name>LibraryManagement.Data</Name>

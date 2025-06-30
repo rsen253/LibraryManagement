@@ -1,27 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace LibraryManagement.Application
+namespace LibraryManagement.Contract
 {
-    public class BookDto
-    {
-        public int BookId { get; set; }
-        public string Title { get; set; }
-        public string AuthorName { get; set; }
-    }
-
-    public class BookHistoryDto
-    {
-        public int BookId { get; set; }
-        public string Title { get; set; }
-        public List<MemberDto> BorrowedBy { get; set; }
-    }
-
-    public class MemberDto
-    {
-        public int MemberId { get; set; }
-        public string Name { get; set; }
-    }
-
     public class MemberBookDto
     {
         public int MemberId { get; set; }

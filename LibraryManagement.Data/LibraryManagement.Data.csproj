@@ -70,6 +70,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibraryManagement.Contract\LibraryManagement.Contract.csproj">
+      <Project>{87420996-3b4f-4354-b7af-71c8a3f5420e}</Project>
+      <Name>LibraryManagement.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Project>{F0563F9C-3339-4491-B8EB-F8E5263DBA88}</Project>
       <Name>LibraryManagement.Domain</Name>
